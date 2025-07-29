@@ -2,16 +2,17 @@
   "name": "womo-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jolimiki.github.io/womo-project-main",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "deploy": "yarn build && gh-pages -d out"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
     "bootstrap": "^5.3.7",
     "clsx": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
