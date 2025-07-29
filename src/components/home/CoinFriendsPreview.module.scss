@@ -1,0 +1,21 @@
+.wrapper {
+  @media (min-width: 992px) {
+    width: 80% !important;
+  }
+}
+
+.coinFriend {
+  border-bottom: 1px solid #d6d6d6;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (min-width: 992px) {
+    border-bottom: none;
+
+    border-right: 1px solid #d6d6d6;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

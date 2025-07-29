@@ -1,0 +1,13 @@
+.avatar {
+  &Wrapper {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &Image {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

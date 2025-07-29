@@ -1,0 +1,149 @@
+$brand: #da5271;
+$brand-50: lighten(#da5271, 25%);
+$brand-100: lighten(#da5271, 20%);
+$brand-200: lighten(#da5271, 15%);
+$brand-300: lighten(#da5271, 10%);
+$brand-400: lighten(#da5271, 5%);
+$brand-500: #da5271;
+$brand-600: darken(#da5271, 5%);
+$brand-700: darken(#da5271, 10%);
+$brand-800: darken(#da5271, 15%);
+$brand-900: darken(#da5271, 20%);
+$brand-950: darken(#da5271, 25%);
+
+$brandGreen: #00b0b4;
+$brandGreen-50: lighten(#00b0b4, 25%);
+$brandGreen-100: lighten(#00b0b4, 20%);
+$brandGreen-200: lighten(#00b0b4, 15%);
+$brandGreen-300: lighten(#00b0b4, 10%);
+$brandGreen-400: lighten(#00b0b4, 5%);
+$brandGreen-500: #00b0b4;
+$brandGreen-600: darken(#00b0b4, 5%);
+$brandGreen-700: darken(#00b0b4, 10%);
+$brandGreen-800: darken(#00b0b4, 15%);
+$brandGreen-900: darken(#00b0b4, 20%);
+$brandGreen-950: darken(#00b0b4, 25%);
+
+$brandYellow: #e3bc41;
+$brandYellow-50: lighten(#e3bc41, 25%);
+$brandYellow-100: lighten(#e3bc41, 20%);
+$brandYellow-200: lighten(#e3bc41, 15%);
+$brandYellow-300: lighten(#e3bc41, 10%);
+$brandYellow-400: lighten(#e3bc41, 5%);
+$brandYellow-500: #e3bc41;
+$brandYellow-600: darken(#e3bc41, 5%);
+$brandYellow-700: darken(#e3bc41, 10%);
+$brandYellow-800: darken(#e3bc41, 15%);
+$brandYellow-900: darken(#e3bc41, 20%);
+$brandYellow-950: darken(#e3bc41, 25%);
+
+$grey: #6b6f82;
+$grey-50: lighten(#6b6f82, 25%);
+$grey-100: lighten(#6b6f82, 20%);
+$grey-200: lighten(#6b6f82, 15%);
+$grey-300: lighten(#6b6f82, 10%);
+$grey-400: lighten(#6b6f82, 5%);
+$grey-500: #6b6f82;
+$grey-600: darken(#6b6f82, 5%);
+$grey-700: darken(#6b6f82, 10%);
+$grey-800: darken(#6b6f82, 15%);
+$grey-900: darken(#6b6f82, 20%);
+$grey-950: darken(#6b6f82, 25%);
+
+$black: #000000;
+$white: #ffffff;
+$danger: #dc3545;
+$success: #198754;
+$waring: #ffc107;
+
+$liner: #ffdcb0;
+$liner-dark: #ffce8f;
+
+$custom-colors: (
+  'brand': $brand,
+  'brand-50': $brand-50,
+  'brand-100': $brand-100,
+  'brand-200': $brand-200,
+  'brand-300': $brand-300,
+  'brand-400': $brand-400,
+  'brand-500': $brand-500,
+  'brand-600': $brand-600,
+  'brand-700': $brand-700,
+  'brand-800': $brand-800,
+  'brand-900': $brand-900,
+  'brand-950': $brand-950,
+
+  'brandGreen': $brandGreen,
+  'brandGreen-50': $brandGreen-50,
+  'brandGreen-100': $brandGreen-100,
+  'brandGreen-200': $brandGreen-200,
+  'brandGreen-300': $brandGreen-300,
+  'brandGreen-400': $brandGreen-400,
+  'brandGreen-500': $brandGreen-500,
+  'brandGreen-600': $brandGreen-600,
+  'brandGreen-700': $brandGreen-700,
+  'brandGreen-800': $brandGreen-800,
+  'brandGreen-900': $brandGreen-900,
+  'brandGreen-950': $brandGreen-950,
+
+  'brandYellow': $brandYellow,
+  'brandYellow-50': $brandYellow-50,
+  'brandYellow-100': $brandYellow-100,
+  'brandYellow-200': $brandYellow-200,
+  'brandYellow-300': $brandYellow-300,
+  'brandYellow-400': $brandYellow-400,
+  'brandYellow-500': $brandYellow-500,
+  'brandYellow-600': $brandYellow-600,
+  'brandYellow-700': $brandYellow-700,
+  'brandYellow-800': $brandYellow-800,
+  'brandYellow-900': $brandYellow-900,
+  'brandYellow-950': $brandYellow-950,
+
+  'grey': $grey,
+  'grey-50': $grey-50,
+  'grey-100': $grey-100,
+  'grey-200': $grey-200,
+  'grey-300': $grey-300,
+  'grey-400': $grey-400,
+  'grey-500': $grey-500,
+  'grey-600': $grey-600,
+  'grey-700': $grey-700,
+  'grey-800': $grey-800,
+  'grey-900': $grey-900,
+  'grey-950': $grey-950,
+
+  'black': $black,
+  'white': $white,
+  'danger': $danger,
+  'success': $success,
+  'waring': $waring,
+
+  'liner': $liner,
+  'liner-dark': $liner-dark,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@each $color, $value in $custom-colors {
+  .text-#{$color} {
+    color: $value !important;
+  }
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
+  .btn-#{$color} {
+    background-color: $value !important;
+  }
+  .btn-outline-#{$color} {
+    color: $value !important;
+    border: 1px solid $value !important;
+    background-color: white !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $value !important;
+      color: white !important;
+    }
+  }
+}

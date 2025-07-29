@@ -1,0 +1,27 @@
+.btn {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #adb5bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    border: 2px solid #ca6168;
+  }
+
+  &Active {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: #ca6168;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

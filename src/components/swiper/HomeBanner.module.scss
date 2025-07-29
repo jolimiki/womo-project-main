@@ -1,0 +1,74 @@
+.wrapper {
+  @media (min-width: 992px) {
+    width: 80% !important;
+  }
+}
+
+.imgWrapper {
+  position: 'relative';
+  width: '100%';
+  aspect-ratio: 8/4;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.prevEl,
+.nextEl {
+  position: absolute;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  outline: none;
+  user-select: none;
+
+  @media (min-width: 992px) {
+    width: 48px;
+    height: 48px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #ff6600;
+    border-right: 2px solid #ff6600;
+    transform: rotate(45deg);
+    @media (min-width: '992px') {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.prevEl {
+  top: 50%;
+  left: 2%;
+  transform: translateY(-100%);
+}
+.nextEl {
+  top: 50%;
+  right: 2%;
+  transform: translateY(-100%);
+}
+
+.prevEl::before {
+  transform: rotate(-135deg); // 向左箭頭
+}
+
+.nextEl::before {
+  transform: rotate(45deg); // 向右箭頭
+}

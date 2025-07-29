@@ -1,0 +1,37 @@
+.coinBody {
+  position: relative;
+  border-radius: 50%;
+
+  &Left {
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+
+  &Right {
+    top: 0;
+    left: 50%;
+    z-index: 10;
+  }
+}
+
+.coinDeco {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coinContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@for $i from 1 through 12 {
+  .coinDeco#{$i} {
+    --angle: #{($i - 1) * 30}deg;
+  }
+}

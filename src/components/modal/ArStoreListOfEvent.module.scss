@@ -1,0 +1,74 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 540px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #da5271;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  color: #00b1b5;
+}
+
+.bg {
+  border-radius: 12px;
+  padding: 12px 0px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #000;
+  background-color: #f4f5fa;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  @media (min-width: 992px) {
+    width: 80% !important;
+  }
+  margin: 0 auto;
+}
