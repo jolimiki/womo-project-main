@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Header />
 
-      {/* 個人發佈貼文 CSR模式*/}
+      {/* 個人發佈貼文 CSR模式11*/}
       <PostPublisher />
 
       {/* 誰擁有我的籌碼 CSR模式 */}
