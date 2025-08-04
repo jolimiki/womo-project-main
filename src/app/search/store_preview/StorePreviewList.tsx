@@ -23,9 +23,9 @@ const StorePreviewList = () => {
       </div>
 
           <div className="row row-cols-lg-3 flex-column flex-lg-row">
-            {Stores.slice(0, 3).map((store, index) => (
+            {Stores.map((store, index) => (
               <div key={index} className={`col col-md-4 px-3 border-0 ${style.coinRecommend}`}>
-                <div className="d-flex justify-content-between align-items-center flex-lg-column shadow-sm py-6 px-2 bg-body rounded-3">
+                <div className="d-flex justify-content-between align-items-center flex-lg-column shadow-sm py-6 px-2 mb-md-6 bg-body rounded-3">
                   <div className="d-flex justify-content-lg-center align-items-center pb-5 ">
                     <Avatar src={store.image} href="/"></Avatar>
                     <div className="ms-3">
