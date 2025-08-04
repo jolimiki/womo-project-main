@@ -1,32 +1,34 @@
-// [本頁目的]：首頁 - 店家籌碼推薦區
+// [本頁目的]：搜尋 - 店家籌碼列表
 
 'use client';
 
-import style from './StorePreview.module.scss';
+import style from '@/components/home/StorePreview.module.scss';
 //元件
 import Link from 'next/link';
-import Avatar from '../ui/avatar/Avatar';
-import Button from '../ui/button/submit/Button';
-import SectionUI from '../ui/section/SectionUI';
+import Avatar from '@/components/ui/avatar/Avatar';
+import Button from '@/components/ui/button/submit/Button';
+import SectionUI from '@/components/ui/section/SectionUI';
 //libs
 import { Stores } from '@/libs/api/stores';
 
-const StorePreview = () => {
+const StorePreviewList = () => {
   return (
     <section className="mt-10 mb-20">
       <div className={`container-fluid ${style.wrapper}`}>
-        <div className="d-flex justify-content-between align-items-center">
-          <h2 className="h5 fw-bold">品牌聚點</h2>
-          <Link href="search/store_preview">
-            <span className={style.link}>探索更多 〉</span>
-          </Link>
-        </div>
-        <SectionUI>
+
+      <div className='mb-8'>
+        <input
+          className="form-control shadow-sm rounded-3 border-0 p-4"
+          type="text"
+          placeholder="請輸入關鍵字"
+        />
+      </div>
+
           <div className="row row-cols-lg-3 flex-column flex-lg-row">
             {Stores.slice(0, 3).map((store, index) => (
-              <div key={index} className={`${style.coinRecommend}`}>
-                <div className="d-flex justify-content-between align-items-center flex-lg-column">
-                  <div className="d-flex justify-content-lg-center align-items-center py-5 ">
+              <div key={index} className={`col col-md-4 px-3 border-0 ${style.coinRecommend}`}>
+                <div className="d-flex justify-content-between align-items-center flex-lg-column shadow-sm py-6 px-2 bg-body rounded-3">
+                  <div className="d-flex justify-content-lg-center align-items-center pb-5 ">
                     <Avatar src={store.image} href="/"></Avatar>
                     <div className="ms-3">
                       <h2 className="h6 fw-bold">{store.name}</h2>
@@ -90,10 +92,10 @@ const StorePreview = () => {
               </div>
             ))}
           </div>
-        </SectionUI>
+
       </div>
     </section>
   );
 };
 
-export default StorePreview;
+export default StorePreviewList;

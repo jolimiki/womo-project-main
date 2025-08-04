@@ -34,7 +34,7 @@ const PostPublisherClient = () => {
     <section className={style.bg}>
       <div className={`container ${style.wrapper}`}>
         <div className="d-flex justify-content-between align-items-center">
-          <Coin scale={isMobile ? 0.6 : isTablet ? 0.8 : 1} color="green">
+          <Coin scale={isMobile ? 0.6 : isTablet ? 0.8 : 0.8} color="green">
             <Avatar href="/" src={AVATAR_LINK.my} />
           </Coin>
           <Button size="large" color="secondary" onClick={() => setGiveMyCoinModal(true)}>

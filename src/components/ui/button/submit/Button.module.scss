@@ -1,7 +1,6 @@
 .button {
   border: none;
   border-radius: 50px;
-  font-weight: 600;
   transition: all 0.2s ease-in-out;
 }
 
@@ -25,9 +24,9 @@
 
 .button-secondary {
   color: #fff;
-  background-color: #00b1b5;
+  background-color: #61ab9a;
   &:hover {
-    background-color: darken(#00b1b5, 10%);
+    background-color: darken(#408776, 10%);
   }
 }
 

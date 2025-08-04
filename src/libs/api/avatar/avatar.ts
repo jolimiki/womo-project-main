@@ -4,7 +4,7 @@ type AvatarOthers = {
 };
 
 export const AVATAR_LINK: { my: string; others: AvatarOthers[] } = {
-  my: 'https://images.unsplash.com/photo-1593260853607-d0e0f639bdab?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXNpYW4lMjBiZWF1dHl8ZW58MHx8MHx8fDI%3D',
+  my: 'https://d1q14jmvwk39e0.cloudfront.net/j78/2021-06-24/110/soN5oVpMMW1NOsZ_1624506345.jpeg',
   others: [
     {
       name: '朵拉公主',

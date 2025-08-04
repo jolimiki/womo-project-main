@@ -32,11 +32,36 @@
       width: 28px;
       height: 28px;
       overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .iconHome {
+      background-image: url(https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/bottom_menu1.svg);
+    }
+    .iconWallet {
+      background-image: url(https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/bottom_menu2.svg);
+    }
+    .iconGift {
+      background-image: url(https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/bottom_menu_ticket.svg);
+    }
+    .iconIncome {
+      background-image: url(https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/bottom_menu_income.svg);
+    }
+    &:hover {
+      .icon {
+        background-position: 0 -44px;
+      }
+    }
+    &.active {
+      .icon {
+        background-position: 0 bottom;
+      }
     }
   }
 
   &NavLink {
-    padding: 16px 8px;
+    padding: 19px 8px;
+    font-size: 1.05rem;
     &:hover {
       color: #da5271;
       .avatar {

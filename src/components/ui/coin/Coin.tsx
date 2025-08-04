@@ -14,7 +14,7 @@ const Coin = ({ children, scale, color }: CoinProps) => {
   const coinBodyShadow = 6 * scale;
   const coinDecoSize = 6 * scale;
   const coinDecoRadius = 43 * scale;
-  const coinContentSize = 1.2 * scale;
+  const coinContentSize = 1.25 * scale;
   const coinColor = color == 'green' ? '#5cb2a1' : color == 'red' ? '#ea5848' : '#f0b71a';
   const coinColorShadow = color == 'green' ? '#4a9183' : color == 'red' ? '#b44033' : '#bd9016';
 

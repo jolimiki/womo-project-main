@@ -50,30 +50,23 @@ const Header = () => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center">
           <Link href="/" className={style.logoWrapper}>
-            <Image src="/images/WOMO-LOGO1.png" alt="LOGO" fill className={style.logoImage} />
+            <Image src="https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/logo.png" alt="LOGO" fill className={style.logoImage} />
           </Link>
           <ul className={`d-none d-lg-flex justify-content-between `}>
             <li className="">
               <Link
                 href="#"
                 className={`d-flex align-items-center ${style.headerNavLink} ${
-                  pathName === '/' ? 'text-brand' : 'text-dark'
+                  pathName === '/' ? `${style.active} text-brand` : 'text-dark'
                 }`}
               >
-                <span className={style.icon}>
-                  <Image
-                    src="https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/bottom_menu1.svg"
-                    alt="AR聚點"
-                    fill
-                  />
-                </span>
-                <CompassIcon width={28} />
+                <span className={`${style.icon} ${style.iconHome}`}></span>
                 <span className="ms-1">AR聚點</span>
               </Link>
             </li>
             <li className="">
               <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
-                <WalletIcon width={28} />
+                <span className={`${style.icon} ${style.iconWallet}`}></span>
                 <span className="ms-1">籌碼包</span>
               </Link>
             </li>
@@ -87,13 +80,13 @@ const Header = () => {
             </li>
             <li className="">
               <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
-                <GiftIcon width={28} />
+                <span className={`${style.icon} ${style.iconGift}`}></span>
                 <span className="ms-1">找禮物</span>
               </Link>
             </li>
             <li className="">
               <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
-                <IncomeIcon width={28} />
+                <span className={`${style.icon} ${style.iconIncome}`}></span>
                 <span className="ms-1">籌碼收入</span>
               </Link>
             </li>

@@ -23,8 +23,8 @@ const CoinFriendsPreview = () => {
         {AVATAR_LINK.others.length > 0 ? (
           <>
             <div className="d-flex justify-content-between align-items-center">
-              <h2 className="h5 fw-bold">
-                共 <span className="fs-2 text-primary">66</span> 人擁有我的籌碼
+              <h2 className="h5">
+                共 <span className="fs-2 text-primary fw-bold">66</span> 人擁有我的籌碼
               </h2>
               <Button size="small" color="secondary" onClick={() => router.push('/')}>
                 +發起籌碼應援
