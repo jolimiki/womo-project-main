@@ -23,6 +23,8 @@ import Avatar from '../ui/avatar/Avatar';
 // const
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
