@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "yarn build && gh-pages -d out"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
