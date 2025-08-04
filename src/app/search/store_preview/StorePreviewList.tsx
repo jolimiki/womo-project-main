@@ -4,10 +4,8 @@
 
 import style from '@/components/home/StorePreview.module.scss';
 //元件
-import Link from 'next/link';
 import Avatar from '@/components/ui/avatar/Avatar';
 import Button from '@/components/ui/button/submit/Button';
-import SectionUI from '@/components/ui/section/SectionUI';
 //libs
 import { Stores } from '@/libs/api/stores';
 

@@ -9,10 +9,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 // icons
-import CompassIcon from '../icons/Compass';
-import WalletIcon from '../icons/Wallet';
-import GiftIcon from '../icons/Gift';
-import IncomeIcon from '../icons/Income';
 import AddPostIcon from '../icons/AddPost';
 import ChatFriendIcon from '../icons/ChatFriend';
 import SearchIcon from '../icons/Search';
