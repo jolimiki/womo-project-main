@@ -2,7 +2,7 @@
   "name": "womo-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jolimiki.github.io/womo-project-main",
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
