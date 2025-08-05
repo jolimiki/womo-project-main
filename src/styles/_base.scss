@@ -48,3 +48,31 @@ button {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+
+.dropdown-menu-more {
+  min-width: 200px;
+  box-shadow: 1px 1px 16px hsl(0deg 0% 0% / 13%);
+  border-radius: 12px;
+  li {
+    :link {
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 7px 20px;
+      display: flex;
+      align-items: center;
+      .icon {
+        line-height: 0;
+      }
+      .txt {
+        margin-left: 5px;
+      }
+      .btn-switch-account {
+        font-size: 0.9rem;
+        color: #898989;
+      }
+    }
+  }
+  .dropdown-divider {
+    border-color: #efefef;
+  }
+}
