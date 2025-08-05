@@ -14,7 +14,7 @@ import { Stores } from '@/libs/api/stores';
 const StorePreview = () => {
   return (
     <section className="mt-10 mb-20">
-      <div className={`container-fluid ${style.wrapper}`}>
+      <div className={`content-container container-fluid ${style.wrapper}`}>
         <div className="d-flex justify-content-between align-items-center">
           <h2 className="h5 fw-bold">品牌聚點</h2>
           <Link href="search/store_preview">

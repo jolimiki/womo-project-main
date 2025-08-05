@@ -21,7 +21,7 @@ const HomeBanner = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className={`container-fluid ${style.wrapper} mb-20 position-relative`}>
+    <div className={`content-container container-fluid ${style.wrapper} mb-20 position-relative`}>
       {/* Navigation按鈕 */}
       <div ref={prevRef} className={style.prevEl}></div>
       <div ref={nextRef} className={style.nextEl}></div>

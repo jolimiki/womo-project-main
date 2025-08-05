@@ -14,7 +14,7 @@ import { KOLs } from '@/libs/api/kols';
 const KolPreview = () => {
   return (
     <section className="mt-10 mb-20">
-      <div className={`container-fluid ${style.wrapper}`}>
+      <div className={`content-container container-fluid ${style.wrapper}`}>
         <div className="d-flex justify-content-between align-items-center">
           <h2 className="h5 fw-bold">創作者聚點</h2>
           <Link href="/">

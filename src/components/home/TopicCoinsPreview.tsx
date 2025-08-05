@@ -13,7 +13,7 @@ import { TOPIC_COINS } from '@/libs/api/topicCoins/topicCoins';
 const TopicCoinsPreview = () => {
   return (
     <section className="mt-10 mb-20">
-      <div className={`container-fluid ${style.wrapper}`}>
+      <div className={`content-container container-fluid ${style.wrapper}`}>
         <div className="d-flex justify-content-between align-items-center">
           <h2 className="h5 fw-bold">主題聚點</h2>
           <Link href="/">

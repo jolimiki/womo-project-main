@@ -19,7 +19,7 @@ const CoinFriendsPreview = () => {
 
   return (
     <section className="mt-10 mb-20">
-      <div className={`container-fluid ${style.wrapper}`}>
+      <div className={`content-container container-fluid ${style.wrapper}`}>
         {AVATAR_LINK.others.length > 0 ? (
           <>
             <div className="d-flex justify-content-between align-items-center">

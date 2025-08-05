@@ -2,7 +2,6 @@
   "name": "womo-project",
   "version": "0.1.0",
   "private": true,
-  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,6 +16,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.60.0",
+    "react-intersection-observer": "^9.16.0",
     "sass": "^1.89.2",
     "swiper": "^11.2.10"
   },
