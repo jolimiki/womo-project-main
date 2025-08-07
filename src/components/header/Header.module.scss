@@ -81,3 +81,24 @@
     }
   }
 }
+
+.menuContainer {
+  overflow: hidden;
+}
+.menuContainerInner {
+  display: flex;
+  width: 200%;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  transform: translateX(0%);
+}
+
+.slideToLeft {
+  transform: translateX(-50%);
+}
+
+.menuPanel {
+  width: 50%;
+  flex-shrink: 0;
+  padding: 0 12px;
+}
