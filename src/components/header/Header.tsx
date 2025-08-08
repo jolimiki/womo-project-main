@@ -26,7 +26,7 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLLIElement>(null);
   const pathName = usePathname();
 
   // 隱藏 header on scroll down
@@ -48,7 +48,7 @@ const Header = () => {
   // Menu icon dropdown
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
+      if (menuRef.current && e.target instanceof Node && !menuRef.current.contains(e.target)) {
         setIsDropdownOpen(false);
       }
     };
