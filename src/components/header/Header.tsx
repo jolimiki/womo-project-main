@@ -9,11 +9,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 // icons
-import AddPostIcon from '../icons/AddPost';
-import ChatFriendIcon from '../icons/ChatFriend';
-import SearchIcon from '../icons/Search';
-import BellIcon from '../icons/Bell';
-import MenuIcon from '../icons/Menu';
+import AddPostIcon from '../icons/AddPostIcon';
+import ChatFriendIcon from '../icons/ChatFriendIcon';
+import SearchIcon from '../icons/SearchIcon';
+import BellIcon from '../icons/BellIcon';
+import MenuIcon from '../icons/MenuIcon';
 
 // 元件
 import Avatar from '../ui/avatar/Avatar';
@@ -108,7 +108,7 @@ const Header = () => {
             <li>
               <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
                 <span className={`${style.icon} ${style.iconIncome}`} />
-                <span className="ms-1">籌碼收入</span>
+                <span className="ms-1">玩斜槓</span>
               </Link>
             </li>
           </ul>
@@ -144,7 +144,7 @@ const Header = () => {
                 <MenuIcon width={28} />
               </button>
 
-              {isDropdownOpen && <HeaderMenuMoreDropdown></HeaderMenuMoreDropdown>}
+              {isDropdownOpen && <HeaderMenuMoreDropdown />}
             </li>
           </ul>
         </div>

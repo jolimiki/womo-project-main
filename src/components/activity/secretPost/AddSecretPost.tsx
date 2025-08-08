@@ -5,7 +5,7 @@ import CheckBtn from '@/components/ui/button/icon/CheckBtn';
 import Coin from '@/components/ui/coin/Coin';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
-import LockIcon from '@/components/icons/Lock';
+import LockIcon from '@/components/icons/LockIcon';
 
 const AddSecretPost = () => {
   const [coinType, setCoinType] = useState('greenCoins');

@@ -1,8 +1,7 @@
 $utilities: map-merge(
   $utilities,
   (
-    'font-size':
-      map-merge(
+    'font-size': map-merge(
         map-get($utilities, 'font-size'),
         (
           responsive: true,
@@ -22,8 +21,7 @@ $utilities: map-merge(
       responsive: true,
     ),
     // border-radius
-    'rounded':
-      (
+    'rounded': (
         property: border-radius,
         class: rounded,
         values: $spacers,
@@ -32,6 +30,17 @@ $utilities: map-merge(
   )
 );
 
-.fs-sm {
-  font-size: 14px;
+.fs-sm-1 {
+  font-size: 0.9rem;
+}
+.fs-sm-2 {
+  font-size: 0.8rem;
+}
+
+.dropdown-item:focus,
+.dropdown-item:focus-visible {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: inherit; // 保留原本字色
 }

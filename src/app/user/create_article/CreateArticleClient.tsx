@@ -26,13 +26,13 @@ import AddCollectGame from '@/components/activity/collectGame/AddCollectGame';
 import { EMOJI } from '@/constants/emoji';
 import { ACTIVITY } from '@/constants/activity';
 // icon
-import PhotoIcon from '@/components/icons/Photo';
-import MicrophoneIcon from '@/components/icons/Microphone';
-import VideoIcon from '@/components/icons/Video';
-import YoutubeIcon from '@/components/icons/Youtube';
-import ArrowIcon from '@/components/icons/Arrow';
-import LocationIcon from '@/components/icons/Location';
-import CancelIcon from '@/components/icons/Cancel';
+import PhotoIcon from '@/components/icons/PhotoIcon';
+import MicrophoneIcon from '@/components/icons/MicrophoneIcon';
+import VideoIcon from '@/components/icons/VideoIcon';
+import YoutubeIcon from '@/components/icons/YoutubeIcon';
+import ArrowIcon from '@/components/icons/ArrowIcon';
+import LocationIcon from '@/components/icons/LocationIcon';
+import CancelIcon from '@/components/icons/CancelIcon';
 
 const CreateArticleClient = () => {
   const searchParams = useSearchParams();

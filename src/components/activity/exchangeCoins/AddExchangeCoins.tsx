@@ -3,8 +3,8 @@
 import style from './AddExchangeCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import Coin from '@/components/ui/coin/Coin';
-import AddIcon from '@/components/icons/Add';
-import ExchangeIcon from '@/components/icons/Exchange';
+import AddIcon from '@/components/icons/AddIcon';
+import ExchangeIcon from '@/components/icons/ExchangeIcon';
 
 const AddExchangeCoins = () => {
   return (

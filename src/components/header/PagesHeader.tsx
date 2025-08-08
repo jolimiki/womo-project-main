@@ -9,8 +9,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 // icon
-import BackArrowIcon from '../icons/BackArrow';
-import CancelIcon from '../icons/Cancel';
+import BackArrowIcon from '../icons/BackArrowIcon';
+import CancelIcon from '../icons/CancelIcon';
 
 const PagesHeader = () => {
   const [showHeader, setShowHeader] = useState(true);

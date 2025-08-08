@@ -9,9 +9,9 @@ import Image from 'next/image';
 import Button from '../ui/button/submit/Button';
 import Avatar from '../ui/avatar/Avatar';
 // icon
-import LocationIcon from '../icons/Location';
-import ScanIcon from '../icons/Scan';
-import MemberIcon from '../icons/Member';
+import LocationIcon from '../icons/LocationIcon';
+import ScanIcon from '../icons/ScanIcon';
+import MemberIcon from '../icons/MemberIcon';
 // api
 import { Stores } from '@/libs/api/stores';
 

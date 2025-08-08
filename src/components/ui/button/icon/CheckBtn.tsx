@@ -1,7 +1,7 @@
 // [本頁目的]：通用型checkbox按鈕
 
 import style from './CheckBtn.module.scss';
-import Check from '@/components/icons/Check';
+import Check from '@/components/icons/CheckIcon';
 
 type Props = {
   isActive?: boolean;

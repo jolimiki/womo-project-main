@@ -6,10 +6,10 @@ import style from './Footer.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 // icons
-import CompassIcon from '../icons/Compass';
-import WalletIcon from '../icons/Wallet';
-import GiftIcon from '../icons/Gift';
-import IncomeIcon from '../icons/Income';
+import CompassIcon from '../icons/CompassIcon';
+import WalletIcon from '../icons/WalletIcon';
+import GiftIcon from '../icons/GiftIcon';
+import IncomeIcon from '../icons/IncomeIcon';
 // 元件
 import Avatar from '../ui/avatar/Avatar';
 // const

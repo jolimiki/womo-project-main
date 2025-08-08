@@ -5,7 +5,7 @@ import style from './AddSendCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Coin from '@/components/ui/coin/Coin';
-import AddIcon from '@/components/icons/Add';
+import AddIcon from '@/components/icons/AddIcon';
 
 const AddSendCoins = () => {
   const [selectedSendMyCoin, setSelectedSendMyCoin] = useState(false);
