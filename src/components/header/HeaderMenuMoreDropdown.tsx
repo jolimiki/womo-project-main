@@ -20,6 +20,7 @@ import {
   IconHelpCircleOutline,
   IconGuideOutline,
   IconLogOutOutline,
+  IconAddPost,
 } from '@/components/icons';
 
 const HeaderMenuMoreDropdown = () => {
@@ -63,6 +64,14 @@ const HeaderMenuMoreDropdown = () => {
               <ul>
                 <li>
                   <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <Link href="#" className="dropdown-item">
+                    <span className="icon fw-bold">
+                      <IconAddPost width={20} />
+                    </span>
+                    <span className="txt">發佈心情</span>
+                  </Link>
                 </li>
                 <li>
                   <Link href="#" className="dropdown-item">

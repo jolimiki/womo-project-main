@@ -4,10 +4,6 @@
 //   // outline: 1px solid black;
 // }
 
-body {
-  background-color: #f4f5fa;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -51,7 +47,7 @@ button {
 
 .dropdown-menu-more {
   min-width: 250px;
-  box-shadow: 1px 1px 16px hsl(0deg 0% 0% / 13%);
+  max-height: calc(100vh - 60px);
   border-radius: 16px;
   border: #e9e9e9 1px solid;
   li {

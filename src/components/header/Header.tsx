@@ -82,7 +82,7 @@ const Header = () => {
                 }`}
               >
                 <span className={`${style.icon} ${style.iconHome}`} />
-                <span className="ms-1">AR聚點</span>
+                <span className="ms-1">瘋碼秀</span>
               </Link>
             </li>
             <li>
@@ -94,9 +94,8 @@ const Header = () => {
             <li>
               <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
                 <span className={style.avatar}>
-                  <Avatar src={AVATAR_LINK.my} size={28} />
+                  <Avatar src={AVATAR_LINK.my} size={32} />
                 </span>
-                <span className="ms-1">瘋碼秀</span>
               </Link>
             </li>
             <li>
@@ -116,11 +115,6 @@ const Header = () => {
           <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li>
               <Link href="#">
-                <AddPostIcon width={30} />
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
                 <ChatFriendIcon width={28} />
               </Link>
             </li>
@@ -134,6 +128,7 @@ const Header = () => {
                 <BellIcon width={28} />
               </Link>
             </li>
+
             <li className="nav-item dropdown" ref={menuRef}>
               <button
                 onClick={toggleDropdown}
