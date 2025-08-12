@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './SearchModal.module.scss';
 import { useDebounce } from '@/hooks/useDebounce';
 import type { SearchItem } from '@/types/search';
@@ -94,8 +95,8 @@ export default function SearchModal() {
     if (li) li.scrollIntoView({ block: 'nearest' });
   }
   function selectItem(item: SearchItem) {
-    // router.push(`/search?kw=${encodeURIComponent(item.label)}`);
-    alert(`你選擇了：「${item.label}」`);
+    // router.push(`/search?kw=${encodeURIComponent(item.name)}`);
+    alert(`你選擇了：「${item.name}」`);
     closeModal();
   }
   const hasQuery = useMemo(() => debouncedQ.trim().length > 0, [debouncedQ]);
@@ -133,8 +134,8 @@ export default function SearchModal() {
                   setQ(e.target.value);
                   setActiveIndex(0);
                 }}
-                placeholder="搜尋關鍵字..."
-                aria-label="搜尋關鍵字"
+                placeholder="搜尋籌碼名稱..."
+                aria-label="搜尋籌碼名稱"
                 className={styles.input}
               />
               <button
@@ -150,8 +151,8 @@ export default function SearchModal() {
               {loading &&
                 Array.from({ length: 5 }).map((_, idx) => (
                   <li key={`skeleton-${idx}`} className={styles.skeletonRow} aria-hidden>
-                    <div className={styles.skeletonLabel}></div>
-                    <div className={styles.skeletonSub}></div>
+                    <div className={styles.skeletonName}></div>
+                    <div className={styles.skeletonContent}></div>
                   </li>
                 ))}
               {!loading && error && <li className={styles.error}>發生錯誤：{error}</li>}
@@ -169,14 +170,30 @@ export default function SearchModal() {
                       key={item.id}
                       role="option"
                       aria-selected={selected}
-                      className={`${styles.row} ${selected ? styles.rowActive : ''}`}
+                      className={`d-flex align-items-center ${styles.row} ${selected ? styles.rowActive : ''}`}
                       onMouseEnter={() => setActiveIndex(idx)}
                       onClick={() => selectItem(item)}
                     >
-                      <div className={styles.label}>{highlight(item.label, debouncedQ)}</div>
-                      {item.sub && (
-                        <div className={styles.sub}>{highlight(item.sub, debouncedQ)}</div>
-                      )}
+                      <div>
+                        {item.image ? (
+                          <img
+                            src={item.image}
+                            width={50}
+                            alt={item.name}
+                            className="rounded-circle"
+                          />
+                        ) : (
+                          <div className={styles.thumbFallback}>📦</div>
+                        )}
+                      </div>
+                      <div className="ms-3">
+                        <div className={styles.name}>{highlight(item.name, debouncedQ)}</div>
+                        {item.content && (
+                          <div className={styles.content}>
+                            {highlight(item.content, debouncedQ)}
+                          </div>
+                        )}
+                      </div>
                     </li>
                   );
                 })}

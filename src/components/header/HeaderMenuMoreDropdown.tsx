@@ -7,6 +7,9 @@ import { useState } from 'react';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
+//libs
+import { Stores } from '@/libs/api/stores';
+
 // icons
 import {
   IconLucidePlus,
@@ -191,46 +194,22 @@ const HeaderMenuMoreDropdown = () => {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-                <li className="">
-                  <Link href="#" className="dropdown-item-user align-items-center">
-                    <span className={style.avatar}>
-                      <Image
-                        src="https://womophoto.s3.amazonaws.com/womo/p/store/fbCjrsuaZRWdogW_1677380125.3"
-                        alt="塔可"
-                        width={40}
-                        className="rounded-circle"
-                      />
-                    </span>
-                    <span className="fw-bold txt ms-2">塔可</span>
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="#" className="dropdown-item-user align-items-center">
-                    <span className={style.avatar}>
-                      <Image
-                        src="https://womophoto.s3.amazonaws.com/womo/p/store/RNt5WXyCBlU6=BL_1748398412.2"
-                        alt="美食"
-                        width={40}
-                        className="rounded-circle"
-                      />
-                    </span>
-                    <span className="fw-bold txt ms-2">美食</span>
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="#" className="dropdown-item-user align-items-center">
-                    <span className={style.avatar}>
-                      <img
-                        src={
-                          'https://womophoto.s3.amazonaws.com/womo/p/store/cllzMyjlsAf6WmY_1672806357.2'
-                        }
-                        width={40}
-                        className="rounded-circle"
-                      />
-                    </span>
-                    <span className="fw-bold txt ms-2">Tacos & Taps</span>
-                  </Link>
-                </li>
+                {Stores.slice(0, 3).map((store, index) => (
+                  <li key={index}>
+                    <Link href="#" className="dropdown-item-user align-items-center">
+                      <span className={style.avatar}>
+                        <Image
+                          src={store.image}
+                          alt={store.name}
+                          width={40}
+                          height={40}
+                          className="rounded-circle"
+                        />
+                      </span>
+                      <span className="fw-bold txt ms-2">{store.name}</span>
+                    </Link>
+                  </li>
+                ))}
                 <li>
                   <hr className="dropdown-divider" />
                 </li>

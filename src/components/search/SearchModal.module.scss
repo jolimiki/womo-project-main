@@ -81,11 +81,11 @@
   background: #eff6ff;
   outline: 1px solid #dbeafe;
 }
-.label {
+.name {
   font-size: 15px;
   color: #111827;
 }
-.sub {
+.content {
   font-size: 13px;
   color: #6b7280;
 }
@@ -153,13 +153,13 @@
   background: #f9fafb;
   animation: pulse 1.5s infinite ease-in-out;
 }
-.skeletonLabel {
+.skeletonName {
   height: 14px;
   width: 60%;
   background: #e5e7eb;
   border-radius: 4px;
 }
-.skeletonSub {
+.skeletonContent {
   height: 12px;
   width: 40%;
   background: #e5e7eb;

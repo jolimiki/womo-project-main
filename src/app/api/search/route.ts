@@ -1,16 +1,160 @@
 import { NextResponse } from 'next/server';
 
 const ITEMS = [
-  { id: 1, label: 'Apple iPhone 15 Pro', sub: '手機 / Apple' },
-  { id: 2, label: 'Apple MacBook Air M3', sub: '筆電 / Apple' },
-  { id: 3, label: 'Samsung Galaxy S24 Ultra', sub: '手機 / Samsung' },
-  { id: 4, label: 'Sony WH-1000XM5', sub: '耳機 / Sony' },
-  { id: 5, label: 'Nintendo Switch OLED', sub: '主機 / Nintendo' },
-  { id: 6, label: 'Dyson V15 Detect', sub: '家電 / Dyson' },
-  { id: 7, label: 'iPad Air M2', sub: '平板 / Apple' },
-  { id: 8, label: 'GoPro HERO 12', sub: '運動攝影機 / GoPro' },
-  { id: 9, label: 'Kindle Paperwhite', sub: '電子書 / Amazon' },
-  { id: 10, label: 'Sony A7 IV', sub: '全片幅相機 / Sony' },
+  {
+    id: 1,
+    name: '美食控',
+    content: 'AR空間社群',
+    status: 0,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/=D8n-mE2JU-dRK=_1729568643.2',
+  },
+  {
+    id: 2,
+    name: '咖啡控',
+    content: 'AR空間社群',
+    status: 0,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/nOO9g=zcMmaHD2n_1729734365.2',
+  },
+  {
+    id: 3,
+    name: '飲料控',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/zZJsWEIv2sS8mI1_1717140288.2',
+  },
+  {
+    id: 4,
+    name: '寵物控',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/HkydnubPURre5bn_1717140403.2',
+  },
+  {
+    id: 5,
+    name: '時尚控',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/aH5Lz=7FmcdJTBV_1729582887.2',
+  },
+  {
+    id: 6,
+    name: '西堤牛排',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/store/store2.jpg',
+  },
+  {
+    id: 7,
+    name: '御私藏',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/store/store3.jpg',
+  },
+  {
+    id: 8,
+    name: '星巴克',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/store/store4.jpg',
+  },
+  {
+    id: 9,
+    name: '台北威秀',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://i.meee.com.tw/vzSicbe.png',
+  },
+  {
+    id: 10,
+    name: '台中威秀',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://i.meee.com.tw/vzSicbe.png',
+  },
+  {
+    id: 11,
+    name: '高雄威秀',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://i.meee.com.tw/vzSicbe.png',
+  },
+  {
+    id: 12,
+    name: '美食控',
+    content: 'AR空間社群',
+    status: 0,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/=D8n-mE2JU-dRK=_1729568643.2',
+  },
+  {
+    id: 13,
+    name: '咖啡控',
+    content: 'AR空間社群',
+    status: 0,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/nOO9g=zcMmaHD2n_1729734365.2',
+  },
+  {
+    id: 14,
+    name: '飲料控',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/zZJsWEIv2sS8mI1_1717140288.2',
+  },
+  {
+    id: 15,
+    name: '寵物控',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/HkydnubPURre5bn_1717140403.2',
+  },
+  {
+    id: 16,
+    name: '時尚控',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/womo/p/store/aH5Lz=7FmcdJTBV_1729582887.2',
+  },
+  {
+    id: 17,
+    name: '西堤牛排',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/store/store2.jpg',
+  },
+  {
+    id: 18,
+    name: '御私藏',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/store/store3.jpg',
+  },
+  {
+    id: 19,
+    name: '星巴克',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/store/store4.jpg',
+  },
+  {
+    id: 20,
+    name: '台北威秀',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://i.meee.com.tw/vzSicbe.png',
+  },
+  {
+    id: 21,
+    name: '台中威秀',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://i.meee.com.tw/vzSicbe.png',
+  },
+  {
+    id: 22,
+    name: '高雄威秀',
+    content: 'AR空間社群',
+    status: 1,
+    image: 'https://i.meee.com.tw/vzSicbe.png',
+  },
 ];
 
 export async function GET(req: Request) {
@@ -27,7 +171,8 @@ export async function GET(req: Request) {
     }
 
     const filtered = ITEMS.filter(
-      (it) => it.label.toLowerCase().includes(q) || (it.sub && it.sub.toLowerCase().includes(q))
+      (it) =>
+        it.name.toLowerCase().includes(q) || (it.content && it.content.toLowerCase().includes(q))
     );
 
     return NextResponse.json({ items: filtered });
