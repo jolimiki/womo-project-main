@@ -9,15 +9,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 // icons
-import AddPostIcon from '../icons/AddPostIcon';
-import ChatFriendIcon from '../icons/ChatFriendIcon';
-import SearchIcon from '../icons/SearchIcon';
-import BellIcon from '../icons/BellIcon';
-import MenuIcon from '../icons/MenuIcon';
+import { IconChatFriend, IconBell, IconMenu } from '@/components/icons';
 
 // 元件
 import Avatar from '../ui/avatar/Avatar';
 import HeaderMenuMoreDropdown from './HeaderMenuMoreDropdown';
+import SearchModal from '@/components/search/SearchModal';
 
 // const
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -73,7 +70,7 @@ const Header = () => {
             />
           </Link>
 
-          <ul className="d-none d-lg-flex justify-content-between">
+          <ul className="d-none d-lg-flex align-items-center justify-content-between">
             <li>
               <Link
                 href="#"
@@ -115,17 +112,20 @@ const Header = () => {
           <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li>
               <Link href="#">
-                <ChatFriendIcon width={28} />
+                <IconChatFriend width={28} />
               </Link>
             </li>
             <li>
               <Link href="#">
-                <SearchIcon width={28} />
+                <SearchModal />
               </Link>
             </li>
             <li>
-              <Link href="#">
-                <BellIcon width={28} />
+              <Link href="#" className="position-relative">
+                <IconBell width={28} />
+                <span className="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle">
+                  <span className="visually-hidden">新通知</span>
+                </span>
               </Link>
             </li>
 
@@ -136,7 +136,7 @@ const Header = () => {
                 aria-expanded={isDropdownOpen}
                 aria-haspopup="true"
               >
-                <MenuIcon width={28} />
+                <IconMenu width={28} />
               </button>
 
               {isDropdownOpen && <HeaderMenuMoreDropdown />}

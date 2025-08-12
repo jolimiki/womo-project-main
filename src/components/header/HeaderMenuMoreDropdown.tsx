@@ -45,10 +45,13 @@ const HeaderMenuMoreDropdown = () => {
           {/* 主帳戶資訊頁 */}
           <div className={style.menuPanel}>
             <div className="dropdown-menu-more-my-info">
-              <Link href="#" className="dropdown-item-user align-items-start p-2 pb-0">
-                <span className={style.avatar}>
-                  <Avatar src={AVATAR_LINK.my} size={40} />
-                </span>
+              <div className="dropdown-item-user align-items-start p-2 pb-0">
+                <Link href="#">
+                  <span className={style.avatar}>
+                    <Avatar src={AVATAR_LINK.my} size={40} />
+                  </span>
+                </Link>
+
                 <span className="fw-bold txt ms-2">
                   <span className="d-block">WOMO小姿</span>
                   <button
@@ -59,7 +62,7 @@ const HeaderMenuMoreDropdown = () => {
                     <i className="bi bi-chevron-right"></i>
                   </button>
                 </span>
-              </Link>
+              </div>
 
               <ul>
                 <li>

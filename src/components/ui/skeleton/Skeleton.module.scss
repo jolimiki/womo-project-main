@@ -1,0 +1,27 @@
+.skeleton {
+  position: relative;
+  background-color: #e0e0e0; // 灰色底
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(
+      90deg,
+      rgba(224, 224, 224, 0) 0%,
+      rgba(245, 245, 245, 0.8) 50%,
+      rgba(224, 224, 224, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

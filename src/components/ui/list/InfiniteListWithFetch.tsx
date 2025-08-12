@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 type InfiniteListWithFetchProps<T> = {
   fetchData: (page: number) => Promise<{ items: T[]; hasMore: boolean }>;
   renderItem: (item: T, index: number) => React.ReactNode;
-  resetKey?: any; // 若變動則清空所有內容重新 fetch
+  resetKey?: unknown; // ✅ 避免 any
   searchKeyword?: string; // 用於判斷是否要顯示 emptyView
   className?: string;
   loadingView?: React.ReactNode;
@@ -29,20 +29,18 @@ function InfiniteListWithFetch<T>({
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [initialLoad, setInitialLoad] = useState(true);
   const { ref, inView } = useInView();
 
-  // ✅ 重設關鍵字或條件時，重新開始
+  // ✅ 重設關鍵字或條件時，清空並回到第一頁
   useEffect(() => {
     setItems([]);
     setPage(1);
     setHasMore(true);
     setError(false);
-    setInitialLoad(true);
   }, [resetKey]);
 
-  // ✅ 載入資料函式
-  const loadMore = async () => {
+  // ✅ 載入資料（包成 useCallback，讓相依陣列可正確追蹤）
+  const loadMore = useCallback(async () => {
     if (loading || !hasMore) return;
     setLoading(true);
     setError(false);
@@ -51,25 +49,27 @@ function InfiniteListWithFetch<T>({
       setItems((prev) => [...prev, ...result.items]);
       setHasMore(result.hasMore);
       setPage((prev) => prev + 1);
-    } catch (e) {
+    } catch (_err) {
+      // ✅ 避免未使用參數
       setError(true);
     } finally {
       setLoading(false);
-      setInitialLoad(false);
     }
-  };
+  }, [fetchData, hasMore, loading, page]);
 
   // ✅ 初次或 reset 後載入第一頁
   useEffect(() => {
-    loadMore();
-  }, [page === 1]);
+    if (page === 1 && items.length === 0 && !loading) {
+      loadMore();
+    }
+  }, [page, items.length, loading, loadMore]);
 
   // ✅ 滾到最底觸發載入下一頁
   useEffect(() => {
-    if (inView && hasMore && !loading) {
+    if (inView) {
       loadMore();
     }
-  }, [inView]);
+  }, [inView, loadMore]);
 
   return (
     <div className={className}>

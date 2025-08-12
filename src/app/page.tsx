@@ -23,9 +23,6 @@ export default function Home() {
       {/* 首頁輪播banner CSR模式 */}
       <HomeBanner />
 
-      {/* 主題籌碼 CSR模式 */}
-      <HotEventsPreview />
-
       {/* 主題籌碼 SSR模式 */}
       <TopicCoinsPreview />
 

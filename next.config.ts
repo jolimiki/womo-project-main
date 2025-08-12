@@ -4,8 +4,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'export',
-  
+  //output: 'export',
+
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       'womo_front.dymain.com',
       'i.meee.com.tw',
     ],
+    remotePatterns: [{ protocol: 'https', hostname: 'd1q14jmvwk39e0.cloudfront.net' }],
   },
 };
 
