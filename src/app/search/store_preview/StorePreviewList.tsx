@@ -3,6 +3,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import style from '@/components/home/StorePreview.module.scss';
 import SectionContainer from '@/components/SectionContainer';
 import Avatar from '@/components/ui/avatar/Avatar';
@@ -58,10 +59,11 @@ const StorePreviewList = () => {
           <div className="message-box-empty w-100 text-center py-5">
             <p>
               <span>
-                <img
+                <Image
                   src="https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/icon_no_data2.png"
                   alt="找不到資料"
                   width={80}
+                  height={80}
                 />
               </span>
             </p>

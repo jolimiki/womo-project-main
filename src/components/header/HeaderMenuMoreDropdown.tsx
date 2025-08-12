@@ -2,6 +2,7 @@
 
 import style from './Header.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -193,10 +194,9 @@ const HeaderMenuMoreDropdown = () => {
                 <li className="">
                   <Link href="#" className="dropdown-item-user align-items-center">
                     <span className={style.avatar}>
-                      <img
-                        src={
-                          'https://womophoto.s3.amazonaws.com/womo/p/store/fbCjrsuaZRWdogW_1677380125.3'
-                        }
+                      <Image
+                        src="https://womophoto.s3.amazonaws.com/womo/p/store/fbCjrsuaZRWdogW_1677380125.3"
+                        alt="塔可"
                         width={40}
                         className="rounded-circle"
                       />
@@ -207,10 +207,9 @@ const HeaderMenuMoreDropdown = () => {
                 <li className="">
                   <Link href="#" className="dropdown-item-user align-items-center">
                     <span className={style.avatar}>
-                      <img
-                        src={
-                          'https://womophoto.s3.amazonaws.com/womo/p/store/RNt5WXyCBlU6=BL_1748398412.2'
-                        }
+                      <Image
+                        src="https://womophoto.s3.amazonaws.com/womo/p/store/RNt5WXyCBlU6=BL_1748398412.2"
+                        alt="美食"
                         width={40}
                         className="rounded-circle"
                       />
