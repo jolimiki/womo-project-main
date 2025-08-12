@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 
   trailingSlash: true,
   images: {
-    //unoptimized: true, // 若是 output: 'export' 再打開
+    unoptimized: true, // 若是 output: 'export' 再打開
     domains: [
       'images.unsplash.com',
       'd1q14jmvwk39e0.cloudfront.net',

@@ -1,13 +1,17 @@
-// [本頁目的]：全域Root Layout
-
-import type { Metadata } from 'next';
-import '../styles/global.scss';
-import Footer from '@/components/footer/Footer';
+// app/layout.tsx
+import type { Metadata, Viewport } from 'next';
+import '@/styles/global.scss';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'WOMO(demo)',
-  description: '皇冠版',
+  title: { default: 'WOMO', template: '%s｜WOMO' },
+  description: 'WOMO',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
@@ -16,11 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        <Footer />
-      </body>
+    <html lang="zh-Hant" suppressHydrationWarning>
+      <body>{children}</body>
     </html>
   );
 }

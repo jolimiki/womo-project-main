@@ -1,13 +1,13 @@
 // [本頁目的]：前台首頁
 
 import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 import PostPublisher from '@/components/home/PostPublisher';
 import CoinFriendsPreview from '@/components/home/CoinFriendsPreview';
 import TopicCoinsPreview from '@/components/home/TopicCoinsPreview';
 import KolPreview from '@/components/home/KolPreview';
 import StorePreview from '@/components/home/StorePreview';
 import HomeBanner from '@/components/swiper/HomeBannerSwiper';
-import HotEventsPreview from '@/components/home/HotEventsPreview';
 
 export default function Home() {
   return (
@@ -31,6 +31,8 @@ export default function Home() {
 
       {/* 網紅籌碼推薦區 CSR模式 */}
       <KolPreview />
+
+      <Footer />
     </>
   );
 }

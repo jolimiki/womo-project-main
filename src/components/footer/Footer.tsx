@@ -23,27 +23,27 @@ const Footer = () => {
         <div className={`order-last ${style.mediaSocialIconListBlock}`}>
           <ul className="d-flex align-items-center">
             <li className="pe-2">
-              <Link href="#" target="_blank">
+              <Link href="https://www.facebook.com/womoid/" target="_blank">
                 <i className="bi bi-facebook"></i>
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" target="_blank">
+              <Link href="https://www.instagram.com/womo.com.tw/" target="_blank">
                 <i className="bi bi-instagram"></i>
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" target="_blank">
+              <Link href="https://www.youtube.com/@womo3388" target="_blank">
                 <i className="bi bi-youtube"></i>
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" target="_blank">
+              <Link href="https://www.threads.com/@womo.com.tw?hl=zh-tw" target="_blank">
                 <i className="bi bi-threads"></i>
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" target="_blank">
+              <Link href="https://lin.ee/ffCalWJ" target="_blank">
                 <i className="bi bi-line"></i>
               </Link>
             </li>
@@ -53,9 +53,9 @@ const Footer = () => {
           <span className="mt-2 mb-1">© WOMO ALL RIGHTS RESERVED.</span>
           <div className="d-md-inline-block">
             <span className="mx-2 d-none d-md-inline">·</span>
-            <Link href="#">隱私權設定</Link>
+            <Link href="/terms/privacy_policy">隱私權設定</Link>
             <span className="mx-2">·</span>
-            <Link href="#">會員條款</Link>
+            <Link href="/terms/services">會員條款</Link>
           </div>
         </div>
       </div>
